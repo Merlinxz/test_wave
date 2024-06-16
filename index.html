@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Kanit -->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Wave Simulation</title>
+</head>
+
+<body>
+    <div class="container-fluid d-flex flex-column justify-content-center align-items-center min-vh-100">
+
+        <div class="canvas-container mt-4">
+            <canvas id="waveCanvas" class="border"></canvas>
+        </div>
+
+        <div class="controls mt-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="amplitudeInput">Amplitude:</label>
+                        <input type="range" id="amplitudeInput" class="form-control-range" min="0" max="100" value="50">
+
+                        <label for="frequencyInput">Frequency:</label>
+                        <input type="range" id="frequencyInput" class="form-control-range" min="0.01" max="0.1" step="0.01" value="0.02">
+
+                        <label for="speedInput">Speed:</label>
+                        <input type="range" id="speedInput" class="form-control-range" min="0.05" max="1.0" step="0.05" value="0.1">
+
+                        <label for="wavelengthInput">Wavelength:</label>
+                        <input type="range" id="wavelengthInput" class="form-control-range" min="10" max="400" value="200">
+
+                        <label for="waveTypeSelect">Wave Type:</label>
+                        <select id="waveTypeSelect" class="custom-select">
+                            <option value="sine">Sine</option>
+                            <option value="cosine">Cosine</option>
+                        </select>
+
+                        <label for="waveColorInput">Wave Color:</label>
+                        <input type="color" id="waveColorInput" class="form-control" value="#007bff">
+
+                        <button type="button" id="resetButton" class="btn btn-secondary mt-3">Reset</button>
+                        <button type="button" id="randomButton" class="btn btn-primary mt-3 ml-2">Randomize</button>
+                    </div>
+                    <div class="col-md-6">
+                        <div id="infoContainer">
+                            <p><strong>Amplitude:</strong> <span id="infoAmplitude">50</span></p>
+                            <p><strong>Frequency:</strong> <span id="infoFrequency">0.02</span></p>
+                            <p><strong>Speed:</strong> <span id="infoSpeed">0.1</span></p>
+                            <p><strong>Wavelength:</strong> <span id="infoWavelength">200</span></p>
+                            <p><strong>Wave Type:</strong> <span id="infoWaveType">Sine</span></p>
+                            <p><strong>Wave Color:</strong> <span id="infoWaveColor">#007bff</span></p>
+                            <p><strong>Frame Count:</strong> <span id="infoFrameCount">0</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Your custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+/* General styles */
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Kanit', sans-serif;
+    background-color: #f8f9fa;
+    /* Light gray background */
+}
+
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.canvas-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+canvas {
+    background-color: #ffffff;
+    /* White canvas background */
+    border: 1px solid #dee2e6;
+    /* Light border */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    /* Full width of its container */
+    max-width: 800px;
+    /* Limit maximum width */
+    height: 300px;
+    /* Set initial height */
+    max-height: 500px;
+    /* Limit maximum height */
+}
+
+.controls {
+    background-color: #ffffff;
+    /* White background */
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    /* Light border */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    /* Limit width for better readability */
+    width: 100%;
+    margin-top: 20px;
+    /* Adjust margin top to separate from canvas */
+}
+
+.controls label {
+    font-weight: 500;
+    /* Medium font weight for labels */
+    margin-bottom: 10px;
+}
+
+.controls input[type="range"] {
+    width: 100%;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.controls button {
+    margin-top: 10px;
+}
+
+#infoContainer {
+    padding: 10px;
+    background-color: #f0f0f0;
+    /* Light gray background for info */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#infoContainer p {
+    margin: 10px 0;
+}
+
+#infoContainer strong {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+
+/* Media Queries for Responsive Design */
+
+
+/* Small devices (landscape phones, 576px and up) */
+
+@media (min-width: 576px) {
+    .canvas-container {
+        margin-top: 40px;
+        /* Increase margin for better spacing */
+    }
+    .controls {
+        padding: 30px;
+        /* Increase padding for better readability */
+    }
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+    .canvas-container {
+        margin-top: 60px;
+        /* Further increase margin for tablets */
+    }
+    .controls {
+        max-width: 700px;
+        /* Increase max-width for wider controls */
+    }
+}
+
+
+/* Large devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {
+    .canvas-container {
+        margin-top: 80px;
+        /* Adjust margin for larger screens */
+    }
+}
+
+
+/* Extra large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {
+    .canvas-container {
+        margin-top: 100px;
+        /* Adjust margin for extra large screens */
+    }
+}
